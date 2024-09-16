@@ -7,7 +7,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: 'Times New Roman', Times, serif; /* Tipografía general */
+    font-family: 'Roboto', sans-serif; /* Tipografía general */
     background-color: #f0f0f0;
     color: #333;
 }
@@ -21,7 +21,6 @@ header {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif; /* Fuente para el título principal */
     font-size: 2.5em;
     margin: 0;
     font-weight: normal;
@@ -62,29 +61,50 @@ nav ul li a:hover {
 main {
     flex: 1;
     padding: 40px 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 40px auto;
+}
+
+.news-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-card {
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* Tres tarjetas por fila con espacio entre ellas */
+    display: flex;
+    flex-direction: column;
 }
 
-h2 {
-    font-family: 'Roboto', sans-serif; /* Fuente para los títulos de sección */
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+}
+
+.news-content h3 {
+    font-size: 1.5em;
     color: #1c2833;
-    font-size: 2em;
-    border-bottom: 2px solid #117864;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-p {
-    font-family: 'Roboto Condensed', sans-serif; /* Tipografía específica para párrafos */
-    font-size: 1.1em;
-    line-height: 1.6em;
+.news-content p {
+    font-size: 1em;
     color: #555;
+    line-height: 1.6em;
 }
 
+/* Estilos para el índice de capítulos */
 .chapter-list {
     list-style-type: none;
     padding: 0;
@@ -109,6 +129,32 @@ p {
     border-bottom: 1px solid #117864;
 }
 
+/* Estilos para las secciones de la constitución */
+h2 {
+    font-family: 'Roboto', sans-serif; /* Fuente para los títulos de sección */
+    color: #1c2833;
+    font-size: 2em;
+    border-bottom: 2px solid #117864;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif; /* Tipografía específica para párrafos */
+    font-size: 1.1em;
+    line-height: 1.6em;
+    color: #555;
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: #888;
+    margin-top: 10px;
+    display: block;
+    font-style: italic;
+}
+
+/* Footer */
 footer {
     background-color: #1c2833;
     color: #f7f9f9;
